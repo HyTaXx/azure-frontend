@@ -1,5 +1,5 @@
 const API_BASE = "https://bayroumeter-func-arm.azurewebsites.net/api";
-const API_KEY = import.meta.env.VITE_FUNCTION_KEY;
+const API_KEY  = window.API_KEY;
 
 let currentUserId = null;
 
