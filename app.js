@@ -1,4 +1,4 @@
-const API_BASE = "https://bayroumeter-func-arm.azurewebsites.net/api";
+const API_BASE = "/api";
 
 let currentUserId = null;
 
