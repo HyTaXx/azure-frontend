@@ -1,0 +1,35 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+}
+h1, h2 { text-align: center; }
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #0078d7;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { background: #005fa3; }
+.hidden { display: none; }
+#listVotes { margin-top: 1rem; }
+#listVotes li { margin-bottom: .4rem; }
+

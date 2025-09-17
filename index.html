@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🗳️ BayrouMeter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🗳️ BayrouMeter</h1>
+
+    <section id="identify">
+      <h2>1️⃣ Je m'identifie</h2>
+      <input id="pseudo" type="text" placeholder="Pseudo" />
+      <input id="email" type="email" placeholder="Email" />
+      <button id="saveUser">Enregistrer</button>
+      <p id="userStatus"></p>
+    </section>
+
+    <section id="voteSection" class="hidden">
+      <h2>2️⃣ Je vote</h2>
+      <p><strong>Est-ce que François Bayrou nous manque ?</strong></p>
+      <label><input type="radio" name="choice" value="Oui"> Oui</label>
+      <label><input type="radio" name="choice" value="Non"> Non</label><br>
+      <button id="sendVote">Voter</button>
+      <p id="voteStatus"></p>
+    </section>
+
+    <section id="results">
+      <h2>3️⃣ Résultats en temps réel</h2>
+      <button id="refresh">Rafraîchir</button>
+      <div id="stats"></div>
+      <ul id="listVotes"></ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
