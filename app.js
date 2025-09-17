@@ -1,4 +1,5 @@
-const API_BASE = "/api";
+const API_BASE = "https://bayroumeter-func-arm.azurewebsites.net/api";
+const API_KEY = import.meta.env.VITE_FUNCTION_KEY;
 
 let currentUserId = null;
 
@@ -11,7 +12,7 @@ document.getElementById("saveUser").addEventListener("click", async () => {
     return;
   }
 
-  const res = await fetch(`${API_BASE}/user`, {
+  const res = await fetch(`${API_BASE}/user?code=${API_KEY}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ pseudo, email })
@@ -38,7 +39,7 @@ document.getElementById("sendVote").addEventListener("click", async () => {
     return;
   }
 
-  const res = await fetch(`${API_BASE}/vote`, {
+  const res = await fetch(`${API_BASE}/vote?code=${API_KEY}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ userId: currentUserId, choice: choice.value })
@@ -55,7 +56,7 @@ document.getElementById("sendVote").addEventListener("click", async () => {
 document.getElementById("refresh").addEventListener("click", loadResults);
 
 async function loadResults() {
-  const res = await fetch(`${API_BASE}/votes`);
+  const res = await fetch(`${API_BASE}/votes?code=${API_KEY}`);
   if (!res.ok) return;
   const data = await res.json();
   document.getElementById("stats").textContent =
